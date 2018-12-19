@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-from ciphers.caesar import encrypt
-from ciphers.vigenere import encrypt
+from ..ciphers.caesar import encrypt
+from ..ciphers.vigenere import encrypt
 
 
 def main():

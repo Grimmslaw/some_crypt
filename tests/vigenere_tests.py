@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import unittest
-from ciphers.vigenere import encrypt
+from ..ciphers.vigenere import encrypt
 
 
 class TestVigenereMethods(unittest.TestCase):

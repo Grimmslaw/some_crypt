@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import unittest
-from ciphers.caesar import encrypt
+from ..ciphers.caesar import encrypt
 
 
 class TestCaesarMethods(unittest.TestCase):
