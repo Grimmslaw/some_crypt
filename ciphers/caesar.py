@@ -1,5 +1,5 @@
 import re
-from ..util.functional import shift_with_wrap
+from util.functional import shift_with_wrap
 
 
 def __encrypt_str(plaintext: str, key: int) -> str:

@@ -1,6 +1,6 @@
 import re
 from typing import Generator
-from ..util.functional import shift_with_wrap
+from util.functional import shift_with_wrap
 
 
 def keygen(keyword: str, retain_case=False) -> Generator[str, None, None]:
