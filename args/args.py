@@ -11,15 +11,15 @@ def parse():
     parser.add_argument('mode', choices=['encrypt', 'decrypt'],
                         help="either 'encrypt' or 'decrypt'", metavar='MODE')
 
-    parser.add_argument('target', help='the target (string or file) to encrypt/decrypt',
+    parser.add_argument('target', help='the target to encrypt/decrypt',
                         metavar='TARGET')
 
     parser.add_argument('-k', '--key', dest='key',
-                        help='the key (numeric shift for caesar or keyword for vigenere',
+                        help='the key (numeric shift for caesar or keyword for vigenere)',
                         metavar='key')
 
     parser.add_argument('-y', '--type', dest='target_type', default='string',
-                        help='whether target is a string or a file',
+                        help="whether target is a 'string' or a 'file'; default is 'string'",
                         metavar='type')
 
     parser.add_argument('-o', '--output', dest='output', default=None,
