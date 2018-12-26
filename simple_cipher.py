@@ -18,12 +18,10 @@ def encrypt(cipher_module, target: str,
     else:
         plaintext = target
 
-    if strip_frmt:
-        return cipher_module.encrypt(plaintext, key, strip_frmt=True)
-    return cipher_module.encrypt(plaintext, key)
+    return cipher_module.encrypt(plaintext, key, strip_frmt=strip_frmt)
 
 
-def decrypt(cipher_module, target: str, key: int or str, target_type: str) -> str:
+def decrypt(cipher_module, target: str, key: int or str, target_type: str, strip_frmt=True) -> str:
     # TODO:
     pass
 
@@ -33,7 +31,7 @@ def main():
     assert argv.mode in ['encrypt', 'decrypt']
 
     cipher_module = import_module(f".{argv.cipher}", "some_crypt.ciphers")
-    res = globals()[argv.mode](cipher_module, argv.target, argv.key, argv.target_type)
+    res = globals()[argv.mode](cipher_module, argv.target, argv.key, argv.target_type, argv.strip_frmt)
 
     if argv.output is None:
         print(res)
