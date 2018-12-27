@@ -21,9 +21,17 @@ def encrypt(cipher_module, target: str,
     return cipher_module.encrypt(plaintext, key, strip_frmt=strip_frmt)
 
 
-def decrypt(cipher_module, target: str, key: int or str, target_type: str, strip_frmt=True) -> str:
-    # TODO:
-    pass
+def decrypt(cipher_module, target: str,
+            key: int or str, target_type: str,
+            strip_frmt=True) -> str:
+    assert target_type in ['string', 'file']
+
+    if target_type is 'file':
+        ciphertext = read_txt_file(target)
+    else:
+        ciphertext = target
+
+    return cipher_module.decrypt(ciphertext, key, strip_frmt=strip_frmt)
 
 
 def main():
