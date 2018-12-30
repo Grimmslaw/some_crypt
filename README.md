@@ -1,3 +1,5 @@
+[![PyPI version](https://badge.fury.io/py/some-crypt.svg)](https://badge.fury.io/py/some-crypt)
+
 # some_crypt
 **DISCLAIMER: This package provides tools for incredibly basic encrypting and decrypting based on mostly-classical
 ciphers. It by NO means provides any resources for cryptographically secure encryption/decryption and should not
